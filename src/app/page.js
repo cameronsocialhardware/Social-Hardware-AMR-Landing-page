@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <Products />
       <Customize />
-      <PrabalModules />
+      {/* <PrabalModules /> */}
       <Contact />
       <Advantages />
       {/* <AdvantagesV1 /> */}

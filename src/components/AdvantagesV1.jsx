@@ -68,7 +68,7 @@ export default function AdvantagesV1() {
   const nextIndex = getSafeIndex(currentIndex + 1);
 
   return (
-    <section className="relative w-full flex flex-col mt-12" id="whyus">
+    <section className="relative w-full flex flex-col mt-12 ml-2" id="whyus">
       <SectionTitle title="Why choose us?" />
       <div className="w-full flex items-center gap-6 relative block min-h-[450px] mt-8 overflow-hidden">
         {/* Left card */}

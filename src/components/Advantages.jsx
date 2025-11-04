@@ -32,7 +32,7 @@ export default function Advantages() {
     },
     {
       icon: <FaMoneyBillWave />,
-      title: "Cost Efficiency",
+      title: "Optimized Cost Structure",
       description:
         "Greater than 40% cost saving for faster ROI when comparing our cobots with Universal Robots UR3 and other similar imported systems.",
     },
@@ -64,10 +64,10 @@ export default function Advantages() {
 
   return (
     <section
-      className="flex flex-col py-16 px-8 bg-gradient-to-b from-gray-50 to-white"
+      className="flex flex-col py-16 px-6 lg:px-26 bg-gradient-to-b from-gray-50 to-white lg:ml-2"
       id="advantages"
     >
-      <SectionTitle title="Why Choose us?" />
+      <SectionTitle title="Why Choose us?" /><br />
       <Carousel
         className="w-full mt-16"
         opts={{
@@ -82,20 +82,22 @@ export default function Advantages() {
       >
         <CarouselContent>
           {advantages.map((advantage, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-              <div className="h-72">
-                <div className="flex flex-col gap-4 bg-white pl-6 pr-6 pb-6 rounded-xl items-center h-full border border-gray-400">
-                  <div className="relative w-full h-13 flex justify-center">
-                    <div className="absolute w-26 h-26 pt-13 bottom-0 bg-white rounded-full flex items-center justify-center bg-gray-100 border border-gray-300 shadow-md">
-                      <span className="text-[#ff6600] text-4xl">
-                        {advantage.icon}
-                      </span>
-                    </div>
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4 p-4">
+              <div className="h-95 group">
+                <div className="relative border-gray-300 border shadow-md hover:shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col gap-6 pl-6 pr-6 pb-6 items-center h-full bg-white">
+                  <div className="absolute inset-0 rounded-md pointer-events-none">
+                    <div className="rounded-md absolute bottom-0 right-0 w-0.5 h-1/2 bg-gray-300  group-hover:bg-[#ff6600] transition-colors duration-300"></div>
+                    <div className="rounded-md absolute bottom-0 right-0 w-1/2 h-0.5 bg-gray-300 group-hover:bg-[#ff6600] transition-colors duration-300"></div>
                   </div>
-                  <h5 className="text-2xl text-black font-semibold text-center">
+                  <div className="relative w-full h-15 flex justify-center">
+                    <span className="text-[#ff6600] pt-8 text-4xl">
+                      {advantage.icon}
+                    </span>
+                  </div>
+                  <h5 className="text-2xl text-black font-semibold text-center mt-2">
                     {advantage.title}
                   </h5>
-                  <p className="text-sm text-[#383838] text-center">
+                  <p className="text-sm text-[#383838] text-center leading-relaxed mt-2">
                     {advantage.description}
                   </p>
                 </div>
